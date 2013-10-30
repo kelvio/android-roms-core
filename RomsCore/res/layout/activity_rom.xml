@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AbstractRomActivity" >
+
+    <TextView
+        android:id="@+id/romName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/letter_bitmap_height"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/romIconImageView"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="10dp"
+        android:scrollHorizontally="true"
+        android:text="@string/rom_name"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textColor="#777777" />
+
+    <ImageView
+        android:id="@+id/romIconImageView"
+        android:layout_width="@dimen/letter_bitmap_width"
+        android:layout_height="@dimen/letter_bitmap_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/romName"
+        android:src="@drawable/clock" />
+
+    <Button
+        android:id="@+id/romDownloadButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/romIconImageView"
+        android:drawableRight="@drawable/download"        
+        android:text="DOWNLOAD" />
+
+    <ImageView
+        android:id="@+id/activityRomHasImage"
+        android:layout_width="@dimen/letter_bitmap_width"
+        android:layout_height="@dimen/letter_bitmap_height"
+        android:layout_alignRight="@+id/romName"
+        android:layout_alignTop="@+id/romName"
+        android:src="@drawable/accept"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/activityRomDownloadDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/romIconImageView"
+        android:layout_alignRight="@+id/romDownloadButton"
+        android:layout_below="@+id/romDownloadButton"
+        android:gravity="center_horizontal"
+        android:text="DESTINATION"
+        android:textColor="#777777" />
+
+    <TextView
+        android:id="@+id/activityRomDescriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/romDescriptionTextField"
+        android:layout_alignRight="@+id/romDescriptionTextField"
+        android:layout_below="@+id/activityRomDownloadDestination"
+        android:layout_marginTop="10dp"
+        android:text="@string/description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#777777"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/romDescriptionTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/activityRomDownloadDestination"
+        android:layout_below="@+id/activityRomDescriptionText"
+        android:paddingTop="5dp"
+        android:text="No description for this game."
+        android:textColor="#777777" />
+
+    <Button
+        android:id="@+id/optionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/romDescriptionTextField"
+        android:layout_centerHorizontal="true"        
+        android:drawableRight="@drawable/apps"        
+        android:text="@string/options" />
+
+</RelativeLayout>

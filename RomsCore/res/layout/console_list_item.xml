@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/consoleListItemConsoleIcon"
+        android:layout_width="@dimen/letter_bitmap_width"
+        android:layout_height="@dimen/letter_bitmap_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/consoleListItemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/consoleListItemConsoleIcon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/consoleListItemConsoleIcon"
+        android:gravity="center_vertical"
+        android:paddingLeft="55dp"
+        android:text="NAME"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#777777" />
+
+    <TextView
+        android:id="@+id/rowListItemInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:text="VIEW ROMS" />
+
+</RelativeLayout>
